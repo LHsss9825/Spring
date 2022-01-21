@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Spring_quartz" />
+        <module name="Proxy" />
+        <module name="AOP" />
+        <module name="Spring_IOC_Annotations" />
+        <module name="Spring_LOC_Xml" />
+        <module name="Spring_Redis" />
+        <module name="Spring_AOP_Annotation" />
+        <module name="Spring_Tracsaction" />
+        <module name="Spring-Mybatis" />
+        <module name="Spring-Transaction_Annotation" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="AOP" target="1.8" />
+      <module name="BeanFactory" target="1.8" />
+      <module name="Proxy" target="1.8" />
+      <module name="Spring-Mybatis" target="1.8" />
+      <module name="Spring-Transaction_Annotation" target="1.8" />
+      <module name="Spring_AOP_Annotation" target="1.8" />
+      <module name="Spring_IOC_Annotation" target="1.8" />
+      <module name="Spring_IOC_Annotations" target="1.8" />
+      <module name="Spring_LOC_Xml" target="1.8" />
+      <module name="Spring_quartz" target="1.8" />
+      <module name="Spring_Redis" target="1.8" />
+      <module name="Spring_Tracsaction" target="1.8" />
+      <module name="Spring_Transcation" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

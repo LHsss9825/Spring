@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+      			http://www.springframework.org/schema/beans/spring-beans.xsd
+				http://www.springframework.org/schema/context
+      			http://www.springframework.org/schema/context/spring-context.xsd ">
+    <context:property-placeholder location="classpath:config.properties"></context:property-placeholder>
+    <!--配置spring要扫描的包。
+            并通过反射判断类上是否有@Service或Repository等注解，若有则生成bean的实例并存放到spring的IOC容器；
+            若遇到@Autowired则按类型注入；
+    -->
+    <context:component-scan base-package="com.qf"></context:component-scan>
+</beans>

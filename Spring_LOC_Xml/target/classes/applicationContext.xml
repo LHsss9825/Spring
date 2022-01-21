@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--1、注意：要导入schema约束-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="userDao" class="com.qf.dao.UserDaoImpl"></bean>
+    <bean id="userService" class="com.qf.service.UserServiceImpl"  init-method="init" destroy-method="destory" scope="prototype" >
+
+        <!--   constructor-arg:构造方法注入
+             1：给谁注入
+             index：参数在构造方法中的位置
+             name：参数在构造方法中的名字
+             2：赋值
+             ref：赋值的是IOC容器中的bean的类型
+
+             value：赋值的是基本数据类型和Strting
+             -->
+        <!--        <constructor-arg name="userDao" ref="userDao"></constructor-arg>-->
+        <!--        <constructor-arg name="userName" value="苏格拉底"></constructor-arg>-->
+
+
+        <!--  set注入方法：
+         1：给谁注入
+             name：参数在构造方法中的名字
+             2：赋值
+             ref：赋值的是IOC容器中的bean的类型
+
+             value：赋值的是基本数据类型和Strting
+
+                <property name="userDao" ref="userDao"></property>
+                <property name="userName" value="社会我兴哥"></property>
+                 -->
+
+        <!--        自动注入
+         <bean id="userService" class="com.qf.service.UserServiceImpl" autowire="byType">
+        <property name="userName" value="sadsdafsd"/>
+        -->
+
+        <property name="mySet">
+            <set>
+                <value>aaaaaaaaaaa</value>
+            </set>
+        </property>
+        <property name="mylist">
+            <list>
+                <value>bbbbbbbbbbbbbb</value>
+            </list>
+        </property>
+        <property name="myStrs">
+            <array>
+                <value>cccccccccccc</value>
+            </array>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="keyaa" value="valuebbb"></entry>
+                <entry key="keycc" value="valueddd"></entry>
+            </map>
+        </property>
+    </bean>
+
+</beans>

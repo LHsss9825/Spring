@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+      			http://www.springframework.org/schema/beans/spring-beans.xsd
+				http://www.springframework.org/schema/context
+      			http://www.springframework.org/schema/context/spring-context.xsd
+      			http://www.springframework.org/schema/tx
+      			http://www.springframework.org/schema/tx/spring-tx.xsd
+      			 http://www.springframework.org/schema/aop
+      			 https://www.springframework.org/schema/aop/spring-aop.xsd">
+    <!--配置spring要扫描的包。
+            并通过反射判断类上是否有@Service或Repository等注解，若有则生成bean的实例并存放到spring的IOC容器；
+            若遇到@Autowired则按类型注入；
+    -->
+    <context:component-scan base-package="com.qf"/>
+    <context:property-placeholder location="db.properties"/>
+
+
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
+        <property name="driverClassName" value="${driverClassName}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${jdbc-username}"/>
+        <property name="password" value="${password}"/>
+    </bean>
+
+    <bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="typeAliasesPackage" value="com.qf.pojo"/>
+    </bean>
+
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.qf.mapper"/>
+        <property name="sqlSessionFactoryBeanName" value="sessionFactory"/>
+    </bean>
+
+    <bean name="userService" class="com.qf.service.UserServiceImpl"/>
+    <!--    配置事务管理器
+       导入事务配置路径
+    -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+
+    <!--    配置事务属性-->
+<!--    <bean class="org.springframework.transaction.support.DefaultTransactionDefinition">-->
+<!--        <property name="propagationBehaviorName" value="PROPAGATION_REQUIRED"></property>-->
+<!--        <property name="readOnly" value="false"></property>-->
+<!--    </bean>-->
+
+    <!--    <bean id="proxyService"  factory-method="getProxyFactoryObject" factory-bean="proxyFactory"></bean>-->
+
+    <!--增强-->
+<tx:advice id="txAdvice" transaction-manager="transactionManager">
+    <!--
+            隔离级别：【默认值】，mysql的隔离级别
+            传播行为：required
+            超时时间：【-1】，永不超时
+            是否只读：增删改false，查true
+            回滚规则：【省略】，运行时异常回滚
+        -->
+    <tx:attributes>
+        <tx:method name="update*" propagation="REQUIRED" read-only="false"></tx:method>
+    </tx:attributes>
+</tx:advice>
+<!--    切点-->
+    <aop:config>
+        <aop:pointcut id="pointcut" expression="execution(* com.qf.service.*.*(..))"/>
+
+<!--    切面-->
+    <aop:advisor advice-ref="txAdvice" pointcut-ref="pointcut"></aop:advisor>
+    </aop:config>
+</beans>

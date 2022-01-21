@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AOP/AOP.iml" filepath="$PROJECT_DIR$/AOP/AOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BeanFactory/BeanFactory.iml" filepath="$PROJECT_DIR$/BeanFactory/BeanFactory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Proxy/Proxy.iml" filepath="$PROJECT_DIR$/Proxy/Proxy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring_Transaction_Xml/Spring-Mybatis.iml" filepath="$PROJECT_DIR$/Spring_Transaction_Xml/Spring-Mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring_Transaction_Annotation1-7/Spring-Transaction_Annotation.iml" filepath="$PROJECT_DIR$/Spring_Transaction_Annotation1-7/Spring-Transaction_Annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring_AOP_Annotation/Spring_AOP_Annotation.iml" filepath="$PROJECT_DIR$/Spring_AOP_Annotation/Spring_AOP_Annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring_IOC_Annotations/Spring_IOC_Annotations.iml" filepath="$PROJECT_DIR$/Spring_IOC_Annotations/Spring_IOC_Annotations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring_LOC_Xml/Spring_LOC_Xml.iml" filepath="$PROJECT_DIR$/Spring_LOC_Xml/Spring_LOC_Xml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SPring_redis/Spring_Redis.iml" filepath="$PROJECT_DIR$/SPring_redis/Spring_Redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring_Mybatis/Spring_Tracsaction.iml" filepath="$PROJECT_DIR$/Spring_Mybatis/Spring_Tracsaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring_quartz/Spring_quartz.iml" filepath="$PROJECT_DIR$/Spring_quartz/Spring_quartz.iml" />
+    </modules>
+  </component>
+</project>

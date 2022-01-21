@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/AOP/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/AOP/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BeanFactory/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BeanFactory/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Proxy/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Proxy/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SPring_redis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SPring_redis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring_AOP_Annotation/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring_AOP_Annotation/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring_IOC_Annotations/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring_IOC_Annotations/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring_LOC_Xml/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring_LOC_Xml/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring_Mybatis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring_Mybatis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring_Transaction_Annotation1-7/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring_Transaction_Annotation1-7/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring_Transaction_Xml/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring_Transaction_Xml/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring_quartz/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring_quartz/src/main/resources" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
